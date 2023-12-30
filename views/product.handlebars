@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/productSinglePage.css">
+</head>
+
+<body>
+    <section class="viewContainer">
+        <div class="productContainer">
+            {{#with product}}
+            <div class="characteristics">
+                <div class="card">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            coffee_maker
+                        </span>
+                    </div>
+                    <div class="text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            emoji_food_beverage
+                        </span>
+                    </div>
+                    <div class="text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            eco
+                        </span>
+                    </div>
+                    <div class="text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            workspace_premium
+                        </span>
+                    </div>
+                    <div class="text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            public
+                        </span>
+                    </div>
+                    <div class="text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{this.imagePath}}" alt="Café">
+            </div>
+            <div class="description">
+                <div class="details">
+                    <h1 class="title">
+                        {{this.title}}
+                    </h1>
+                    <p class="prodDesc">
+                        {{this.description}}
+                    </p>
+                    <div class="extraInfoContainer">
+                        <div class="extraInfo mostSell">
+                            <p>
+                                Mais Vendido
+                            </p>
+                            <span class="material-symbols-outlined">
+                                shopping_basket
+                            </span>
+                        </div>
+                        <div class="extraInfo new">
+                            <p>
+                                Novidade
+                            </p>
+                            <span class="material-symbols-outlined">
+                                grade
+                            </span>
+                        </div>
+                    </div>
+                    <h2 class="price"><span>R$</span>{{price}}<span style="margin-left: 5px;">un.</span></h2>
+                </div>
+                <div class="buttons">
+                    <button class="addToCard">Adiconar ao carrinho
+                        <span class="material-symbols-outlined">
+                            add_shopping_cart
+                        </span></button>
+                    <button class="buy">Comprar
+                        <span class="material-symbols-outlined">
+                            shopping_cart_checkout
+                        </span>
+                    </button>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </section>
+</body>
+
+</html>

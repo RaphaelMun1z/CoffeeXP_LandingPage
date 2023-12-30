@@ -1,0 +1,277 @@
+html,
+.productContainer>.characteristics {
+    /* For Firefox */
+    overflow-y: scroll;
+    scrollbar-color: #008000 whitesmoke;
+    scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: #008000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #008000;
+}
+
+.viewContainer {
+    height: 100vh;
+    background-color: #fff;
+    background-image: url('../img/fundo_graos.png');
+    padding: 7em 10em;
+}
+
+.viewContainer>.productContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.productContainer>.characteristics {
+    position: relative;
+    display: flex;
+    width: 30%;
+    padding: 2em;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: whitesmoke;
+    border-radius: 50px !important;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.productContainer:hover {
+    scrollbar-color: #555 #f1f1f1;
+}
+
+.productContainer>.characteristics:after {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90px;
+    margin-bottom: -10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-image: url('../img/sombra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(-1);
+}
+
+.productContainer>.characteristics>.card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 130px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.productContainer>.characteristics>.card>.icon {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.productContainer>.characteristics>.card>.icon>span {
+    font-size: 45pt;
+    color: #B87333;
+}
+
+
+.productContainer>.characteristics>.card>.text {
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    padding: 2em 1em;
+    align-items: center;
+    text-align: left;
+    color: #B87333;
+    font-weight: 600;
+}
+
+.productContainer>.image {
+    position: relative;
+    display: flex;
+    width: 40%;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.productContainer>.image:before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url('../img/graos_caindo.png');
+    transform: scale(1.4);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    filter: drop-shadow(13px 3px 5px #000000);
+}
+
+.productContainer>.image>img {
+    object-fit: contain;
+    height: 100%;
+    filter: drop-shadow(13px 43px 15px #000000);
+}
+
+.productContainer>.description {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    padding: 2em;
+    justify-content: space-around;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.productContainer>.description>.details {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    max-height: 80%;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.productContainer>.description>.details>h1 {
+    color: #B87333;
+    font-size: 25pt;
+}
+
+.productContainer>.description>.details>p {
+    color: #B87333;
+    text-align: justify;
+}
+
+.productContainer>.description>.details>h2 {
+    color: #B87333;
+    font-size: 35pt;
+}
+
+.productContainer>.description>.details>h2>span {
+    font-size: 20pt;
+    margin-right: 5px;
+}
+
+.productContainer>.description>.details>.extraInfoContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+}
+
+.productContainer>.description>.details>.extraInfoContainer>.extraInfo {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.extraInfo.new {
+    background-color: #ffcc00 !important;
+}
+
+.extraInfo.mostSell {
+    background-color: #339933 !important;
+}
+
+.productContainer>.description>.details>.extraInfoContainer>.extraInfo>p {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.productContainer>.description>.details>.extraInfoContainer>.extraInfo>span {
+    color: whitesmoke;
+}
+
+.productContainer>.description>.buttons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    max-height: 20%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.productContainer>.description>.buttons>.addToCard {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    min-height: 60px;
+    background-color: #ff9900;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14pt;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    text-transform: uppercase;
+}
+
+.productContainer>.description>.buttons>.buy {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    min-height: 60px;
+    background-color: #008000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14pt;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    text-transform: uppercase;
+}
+
+.productContainer>.description>.buttons>.addToCard:hover,
+.productContainer>.description>.buttons>.buy:hover {
+    opacity: .5;
+}

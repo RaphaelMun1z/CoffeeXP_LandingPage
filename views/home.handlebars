@@ -8,7 +8,7 @@
     <div class="mainContainer">
         <div class="textContainer">
             <div class="text">
-                <img class="image" src="/img/kit_cafe.png" alt="Xícara de café">
+                <img class="image" src="/img/logo.png" alt="Xícara de café">
                 <h1>CoffeeXP</h1>
                 <p>"Descubra a Arte de Beber Café: Em Cada Gole, uma Jornada de Sabores na CoffeeXP."</p>
                 <button>Saber mais</button>
@@ -107,70 +107,13 @@
         <h1 class="title">Nossas Principais Seleções para uma Experiência Café Inigualável.</h1>
     </div>
     <div class="coffeeCardsContainer">
-        <div class="card">
-            <div class="top">
-                <div class="image">
-                    <img src="/img/cafe_tipo_1.png" alt="Café">
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="content">
-                    <h1>Organic</h1>
-                    <p>Aroma Puro e Limpo, Sabor Fresco e Nítido, Características Sustentáveis e Certificadas.</p>
-                    <h3><span>R$</span>149,90<span> kg</span></h3>
-                    <button>Comprar</button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="top">
-                <div class="image">
-                    <img src="/img/cafe_tipo_2.png" alt="Café">
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="content">
-                    <h1>Light Roast</h1>
-                    <p>Aroma vibrante, sabor brilhante, acidez marcante, notas complexas e nuances frutadas.</p>
-                    <h3><span>R$</span>99,90<span> kg</span></h3>
-                    <button>Comprar</button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="top">
-                <div class="image">
-                    <img src="/img/cafe_tipo_3.png" alt="Café">
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="content">
-                    <h1>Single Origin</h1>
-                    <p>Aroma Autêntico, Sabor Distinto que Reflete a Origem Única, Uma Experiência Café Singular.</p>
-                    <h3><span>R$</span>129,90<span> kg</span></h3>
-                    <button>Comprar</button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="top">
-                <div class="image">
-                    <img src="/img/cafe_tipo_4.png" alt="Café">
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="content">
-                    <h1>Arábica</h1>
-                    <p>Aroma Exuberante, Sabor Suave e Complexo, Características Distintas de Frutas e Florais.</p>
-                    <h3><span>R$</span>89,90<span> kg</span></h3>
-                    <button>Comprar</button>
-                </div>
-            </div>
-        </div>
+        {{#each products}}
+        {{> product}}
+        {{/each}}
     </div>
 </section>
-<svg id="wave" style="transform:rotate(0deg); transition: 0.3s; margin-bottom: -5px;" viewBox="0 0 2500 480" version="1.1"
-    xmlns="http://www.w3.org/2000/svg">
+<svg id="wave" style="transform:rotate(0deg); transition: 0.3s; margin-bottom: -5px;" viewBox="0 0 2500 480"
+    version="1.1" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
             <stop stop-color="rgba(0, 0, 0)" offset="0%"></stop>
@@ -182,5 +125,39 @@
     </path>
 </svg>
 <section class="aboutUs">
-
+    <div class="contentContainer">
+        <h1 class="title">Explorando a Essência: Descubra a nossa história e dedicação ao café em uma jornada única e
+            apaixonante.</h1>
+    </div>
+    <div class="aboutUsContent">
+        <div class="text">
+            <h1>
+                Bem-vindo à CoffeeXP, onde cada xícara conta uma história. Atuamos no mercado desde 1910, cultivando uma
+                paixão centenária pelo café. Nosso compromisso com a excelência e a tradição tornou-se parte integrante
+                da nossa jornada, refletindo-se em cada grão escolhido e em cada gole apreciado. Junte-se a nós nesta
+                celebração de sabores e aromas que atravessam gerações, pois para nós, o café é uma arte que perdura no
+                tempo.
+            </h1>
+        </div>
+        <div class="image">
+            <img src="/img/loja_cafe.png" alt="">
+        </div>
+    </div>
+</section>
+<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 2500 480" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(53, 46, 42)" offset="0%"></stop>
+            <stop stop-color="rgba(184, 115, 51)" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,0L26.7,8.2C53.3,16,107,33,160,89.8C213.3,147,267,245,320,285.8C373.3,327,427,310,480,294C533.3,278,587,261,640,236.8C693.3,212,747,180,800,187.8C853.3,196,907,245,960,277.7C1013.3,310,1067,327,1120,294C1173.3,261,1227,180,1280,147C1333.3,114,1387,131,1440,155.2C1493.3,180,1547,212,1600,204.2C1653.3,196,1707,147,1760,155.2C1813.3,163,1867,229,1920,285.8C1973.3,343,2027,392,2080,383.8C2133.3,376,2187,310,2240,285.8C2293.3,261,2347,278,2400,261.3C2453.3,245,2507,196,2560,179.7C2613.3,163,2667,180,2720,228.7C2773.3,278,2827,359,2880,326.7C2933.3,294,2987,147,3040,114.3C3093.3,82,3147,163,3200,220.5C3253.3,278,3307,310,3360,294C3413.3,278,3467,212,3520,220.5C3573.3,229,3627,310,3680,351.2C3733.3,392,3787,392,3813,392L3840,392L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z">
+    </path>
+</svg>
+<section class="clientsMsg">
+    <div class="contentContainer alternative">
+        <h1 class="title">Vozes dos Apreciadores: Opiniões que Aquecem Nossos Corações</h1>
+    </div>
 </section>

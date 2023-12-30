@@ -184,16 +184,15 @@ section {
 
 .textContainer>.text>button {
     border: none;
-    backdrop-filter: blur(25px);
-    background: transparent;
-    border: 1px solid #fff;
+    background: #fff;
     padding: 1em 2em;
     color: #fff;
-    border-radius: 10px;
     text-transform: capitalize;
     font-size: 15pt;
     font-weight: 700;
     cursor: pointer;
+    border-radius: 20px;
+    color: var(--cor-cafe);
 }
 
 .textContainer>.text>button:hover {
@@ -451,6 +450,19 @@ section {
 .coffeeCardsContainer>.card>.top>.image>img {
     height: 100%;
     object-fit: cover;
+    z-index: 5;
+}
+
+.coffeeCardsContainer>.card>.top>.image::before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1;
 }
 
 .coffeeCardsContainer>.card>.bottom {
@@ -481,7 +493,9 @@ section {
 .coffeeCardsContainer>.card>.bottom>.content>h1 {
     color: var(--cor-cobre);
     font-weight: 900;
-    font-size: 25pt;
+    font-size: 17pt;
+    text-align: center;
+    padding: 0 1.8em;
 }
 
 .coffeeCardsContainer>.card>.bottom>.content>p {
@@ -508,7 +522,8 @@ section {
     margin-right: 5px;
 }
 
-.coffeeCardsContainer>.card>.bottom>.content>button {
+.coffeeCardsContainer>.card>.bottom>.content>a {
+    text-decoration: none;
     color: whitesmoke;
     border: none;
     background-color: var(--cor-verde);
@@ -530,4 +545,63 @@ footer {
 .aboutUs {
     height: 100vh;
     background-color: rgba(53, 46, 42);
+}
+
+.aboutUs>.aboutUsContent {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    z-index: 5;
+}
+
+.aboutUs>.aboutUsContent:before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 600px;
+    height: 100%;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    background-image: url('../img/graos_caindo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translate(-30%, 0) scale(1.6);
+    opacity: .3;
+}
+
+.aboutUs>.aboutUsContent>.text {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+}
+
+.aboutUs>.aboutUsContent>.text>h1 {
+    color: #fff;
+    font-size: 18pt;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.aboutUs>.aboutUsContent>.image {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.aboutUs>.aboutUsContent>.image>img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(3px 13px 15px #000000);
 }
