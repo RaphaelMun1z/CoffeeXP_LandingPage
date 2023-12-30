@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+    --cor-cafe: #352E2A;
+    --cor-verde: #556B2F;
+    --cor-cobre: #B87333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 5em;
+    background-color: rgba(184, 115, 51, 1);
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    transform: translateY(0%);
+}
+
+nav.hidden {
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+nav>.navigation {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+nav>.navigation>ul {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+    gap: 20px;
+}
+
+nav>.navigation>ul>li {
+    color: #fff;
+    font-size: 15pt;
+}
+
+nav>.navigation>ul>li:hover {
+    opacity: .5;
+}
+
+nav>.navigation>ul>li>a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav>.logoContainer {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+nav>.logoContainer>img {
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+}
+
+nav>.logoContainer>p {
+    font-size: 15pt;
+    color: #fff;
+    font-weight: 500;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3em 15em;
+    width: 100%;
+}
+
+.landing {
+    max-height: 100vh;
+    width: 100%;
+    padding: inherit;
+}
+
+.landing>.bgVideo {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.landing>.bgVideo>video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    object-fit: cover !important;
+}
+
+.landing>.bgVideo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.mainContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.textContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer>.text {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 250px;
+    z-index: 10;
+}
+
+.textContainer>.text>.image {
+    position: relative;
+    display: flex;
+    object-fit: cover;
+    width: 130px;
+    height: fit-content;
+}
+
+.textContainer>.text>h1 {
+    color: #fff;
+    font-size: 60pt;
+}
+
+.textContainer>.text>p {
+    color: #fff;
+    font-size: 15pt;
+}
+
+.textContainer>.text>button {
+    border: none;
+    backdrop-filter: blur(25px);
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 1em 2em;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-size: 15pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.textContainer>.text>button:hover {
+    opacity: .7;
+}
+
+.waveContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+.storeContainer {
+    background-color: var(--cor-cafe);
+    height: 100vh;
+    justify-content: center;
+    padding: 3em 15em;
+    flex-wrap: wrap;
+}
+
+.storeContainer:before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    background-image: url('../img/fundo_xicara.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .1;
+    z-index: 10;
+    bottom: -100px;
+    right: auto;
+    left: auto;
+}
+
+.contentContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+}
+
+.contentContainer>.title {
+    color: #fff;
+    font-size: 40pt;
+    text-align: center;
+    padding: 0 4em;
+}
+
+.alternative>.title {
+    color: var(--cor-cobre) !important;
+}
+
+.cardsContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+.cardsContainer>.card {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 100%;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+}
+
+.card>.insideCard {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 4em;
+    gap: 10px;
+}
+
+.card>.insideCard>.icon {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, var(--cor-cobre), var(--cor-verde));
+    border-image-slice: 1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in-out;
+}
+
+.card:hover .icon {
+    transform: rotate(45deg);
+    width: 180px;
+    height: 180px;
+}
+
+.card:hover .icon>span {
+    transition: all .3s ease-in-out;
+    transform: rotate(-45deg);
+}
+
+.card>.insideCard>.icon>span {
+    font-size: 70pt;
+    line-height: 1;
+    background: linear-gradient(to right, var(--cor-cobre), var(--cor-verde));
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.card>.insideCard>h3 {
+    font-size: 14pt;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.card>.insideCard>h1 {
+    font-size: 25pt;
+    font-weight: 900;
+    text-align: center;
+    color: var(--cor-cobre);
+    text-transform: uppercase;
+}
+
+.card>.insideCard>p {
+    color: #fff;
+    font-weight: 900;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.card:hover .insideCard>p {
+    border: none;
+    background-color: #fff;
+    color: var(--cor-cobre);
+}
+
+.card>.insideCard>p:hover {
+    opacity: .5;
+}
+
+.card>.insideCard>p>a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mainGrains {
+    height: 100vh;
+}
+
+.coffeeCardsContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.coffeeCardsContainer:before {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    box-sizing: border-box;
+    background-image: url('../img/xicara1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: .4;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translate(60%, 50%);
+}
+
+.coffeeCardsContainer>.card {
+    position: relative;
+    display: flex;
+    width: 24%;
+    height: 100%;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    background-image: url('../img/fundo_graos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card:hover .bottom {
+    border-radius: 0%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card:hover .bottom>.content {
+    gap: 20px;
+}
+
+.coffeeCardsContainer>.card:hover .bottom>.content>p {
+    font-size: 15pt;
+    height: fit-content;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card:hover .bottom>.content>button {
+    font-size: 14pt;
+    transition: all .3s ease-in-out;
+    padding: 20px 40px;
+}
+
+.coffeeCardsContainer>.card:hover .top {
+    height: 0%;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card>.top {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card>.top>.image {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffeeCardsContainer>.card>.top>.image>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.coffeeCardsContainer>.card>.bottom {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: whitesmoke;
+    border-radius: 50% 50% 0 0;
+    padding: 0em 1em;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 0 0;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content>h1 {
+    color: var(--cor-cobre);
+    font-weight: 900;
+    font-size: 25pt;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content>p {
+    color: var(--cor-verde);
+    font-size: 10pt;
+    font-weight: 300;
+    text-align: center;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    margin: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content>h3 {
+    color: var(--cor-verde);
+    font-size: 25pt;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content>h3>span {
+    font-size: 15pt;
+    margin-right: 5px;
+}
+
+.coffeeCardsContainer>.card>.bottom>.content>button {
+    color: whitesmoke;
+    border: none;
+    background-color: var(--cor-verde);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: all .3s ease-in-out;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(184, 115, 51, 1);
+}
+
+.aboutUs {
+    height: 100vh;
+    background-color: rgba(53, 46, 42);
+}
