@@ -12,6 +12,7 @@
     box-sizing: border-box;
     outline: none;
     font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: whitesmoke;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -604,4 +606,30 @@ footer {
     object-fit: cover;
     border-radius: 50%;
     filter: drop-shadow(3px 13px 15px #000000);
+}
+
+.clientsMsg {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    z-index: 5;
+    background-color: whitesmoke;
+}
+
+.clientsMsg:before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 400px;
+    height: 100%;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    background-image: url('../img/like-coffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translate(30%, 0) scale(1.6);
+    opacity: .3;
 }
