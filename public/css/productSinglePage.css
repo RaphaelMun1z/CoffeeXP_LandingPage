@@ -275,3 +275,30 @@ body::-webkit-scrollbar-thumb {
 .productContainer>.description>.buttons>.buy:hover {
     opacity: .5;
 }
+
+@media (max-width: 1200px) {
+    .productContainer {
+        flex-direction: column !important;
+        gap: 2em !important;
+    }
+
+    .productContainer>div {
+        width: 100% !important;
+    }
+
+    .productContainer>.image>img {
+        height: 60vh !important;
+    }
+
+    .productContainer>.characteristics {
+        overflow: inherit !important;
+    }
+
+    .productContainer>.characteristics::after {
+        display: none !important;
+    }
+
+    .productContainer>.image::before {
+        transform: scale(1.2) !important;
+    }
+}

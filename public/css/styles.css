@@ -84,6 +84,7 @@ nav>.logoContainer {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    text-decoration: none;
 }
 
 nav>.logoContainer>img {
@@ -102,7 +103,8 @@ section {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 3em 15em;
+    padding: 3em 1em;
+    gap: 2em;
     width: 100%;
 }
 
@@ -176,12 +178,13 @@ section {
 
 .textContainer>.text>h1 {
     color: #fff;
-    font-size: 60pt;
+    font-size: min(10vw, 60pt);
 }
 
 .textContainer>.text>p {
     color: #fff;
-    font-size: 15pt;
+    font-size: min(4vw, 15pt);
+    text-align: center;
 }
 
 .textContainer>.text>button {
@@ -190,7 +193,7 @@ section {
     padding: 1em 2em;
     color: #fff;
     text-transform: capitalize;
-    font-size: 15pt;
+    font-size: min(4vw, 15pt);
     font-weight: 700;
     cursor: pointer;
     border-radius: 20px;
@@ -206,13 +209,14 @@ section {
     display: flex;
     width: 100%;
     height: 40%;
+    align-items: flex-end;
 }
 
 .storeContainer {
     background-color: var(--cor-cafe);
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
-    padding: 3em 15em;
+    padding: 3em 1em;
     flex-wrap: wrap;
 }
 
@@ -243,7 +247,7 @@ section {
 
 .contentContainer>.title {
     color: #fff;
-    font-size: 40pt;
+    font-size: min(7vw, 40pt);
     text-align: center;
     padding: 0 4em;
 }
@@ -255,15 +259,15 @@ section {
 .cardsContainer {
     position: relative;
     display: flex;
-    width: 100%;
-    height: 500px;
+    width: fit-content;
+    height: fit-content;
     justify-content: space-evenly;
 }
 
 .cardsContainer>.card {
     position: relative;
     display: flex;
-    width: 30%;
+    width: 25vw;
     height: 100%;
     border-radius: 15px;
     flex-wrap: wrap;
@@ -358,13 +362,14 @@ section {
 }
 
 .mainGrains {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .coffeeCardsContainer {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 80vw;
+    margin: auto;
     height: 500px;
     justify-content: space-evenly;
     gap: 30px;
@@ -389,7 +394,7 @@ section {
 .coffeeCardsContainer>.card {
     position: relative;
     display: flex;
-    width: 24%;
+    width: fit-content;
     height: 100%;
     border-radius: 20px;
     flex-wrap: wrap;
@@ -540,21 +545,43 @@ footer {
     position: relative;
     display: flex;
     width: 100%;
-    height: 400px;
+    height: fit-content;
+    padding: 3em 0 5em 0;
     background-color: rgba(184, 115, 51, 1);
+    justify-content: center;
+    align-items: center;
+}
+
+footer>p {
+    font-size: min(5vw, 20pt);
+    color: #fff;
+    font-weight: 300;
+}
+
+footer>p>a {
+    text-decoration: none;
+    border: 2px solid var(--cor-cafe);
+    font-weight: 600;
+    color: var(--cor-cafe);
+    border-radius: 10px;
+    padding: .4em 1em;
+    margin-left: .2em;
 }
 
 .aboutUs {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(53, 46, 42);
 }
 
 .aboutUs>.aboutUsContent {
     position: relative;
     display: flex;
-    width: 100%;
-    height: 500px;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin: auto;
+    height: fit-content;
     z-index: 5;
+    gap: 1em;
 }
 
 .aboutUs>.aboutUsContent:before {
@@ -578,7 +605,7 @@ footer {
     position: relative;
     display: flex;
     height: 100%;
-    width: 50%;
+    width: 48%;
     justify-content: center;
     align-items: center;
     padding: 3em;
@@ -598,7 +625,7 @@ footer {
     width: 50%;
     justify-content: center;
     align-items: center;
-    padding: 5em;
+    padding: 1em;
 }
 
 .aboutUs>.aboutUsContent>.image>img {
@@ -612,7 +639,7 @@ footer {
     position: relative;
     display: flex;
     width: 100%;
-    height: 500px;
+    min-height: 100vh;
     z-index: 5;
     background-color: whitesmoke;
 }
@@ -632,4 +659,244 @@ footer {
     background-position: center;
     transform: translate(30%, 0) scale(1.6);
     opacity: .3;
+}
+
+.clientsMsg>.clientsMsgContent {
+    position: relative;
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    height: fit-content;
+    gap: 2em;
+}
+
+.clientsMsg>.clientsMsgContent>.item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 5em 2em;
+    background-color: #fff;
+    gap: .5em;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d5d4d4;
+}
+
+.clientsMsg>.clientsMsgContent>.item>.image {
+    position: relative;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: #d5d4d4;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.clientsMsg>.clientsMsgContent>.item>.image>img {
+    background-color: #fff;
+}
+
+.clientsMsg>.clientsMsgContent>.item>h2 {
+    font-size: 20pt;
+    color: #222;
+    text-align: center;
+    font-weight: 600;
+}
+
+.clientsMsg>.clientsMsgContent>.item>p {
+    color: #222;
+    text-align: justify;
+}
+
+.clientsMsg>.clientsMsgContent>.item>p>span {
+    font-weight: 900;
+    font-size: 20pt;
+    margin: 0 .2em;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 5;
+    background-color: var(--cor-cafe);
+}
+
+.contact>.contactContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact>.contactContainer>form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.contact>.contactContainer>form>label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: .5em;
+}
+
+.contact>.contactContainer>form>label>p {
+    font-size: 22pt;
+    color: #fff;
+    font-weight: 700;
+}
+
+.contact>.contactContainer>form>label>input,
+.contact>.contactContainer>form>label>textarea {
+    position: relative;
+    display: flex;
+    width: 600px;
+    height: fit-content;
+    border: 1px solid #d5d4d4;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    padding: .5em;
+    font-size: 20pt;
+    resize: none;
+}
+
+.contact>.contactContainer>form>button {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--cor-cobre);
+    border: none;
+    font-size: 20pt;
+    color: #fff;
+    padding: .5em 2em;
+    border-radius: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 20pt;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.contact>.contactContainer>form>button:hover {
+    opacity: .5;
+    transition: all .1s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    nav {
+        justify-content: center !important;
+    }
+
+    nav>.navigation {
+        display: none !important;
+    }
+
+    .mainContainer {
+        height: 100% !important;
+    }
+
+    .landing {
+        max-height: fit-content !important;
+        height: 100vh !important;
+        padding: 0 !important;
+    }
+
+    .landing>.bgVideo {
+        height: 100vh !important;
+    }
+
+    .textContainer .text {
+        padding: 0 1em !important;
+    }
+
+    .contentContainer>.title {
+        padding: 0 !important;
+    }
+
+    .storeContainer {
+        width: 100% !important;
+        height: fit-content !important;
+        padding: 1em !important;
+        gap: 1em !important;
+    }
+
+    .cardsContainer {
+        flex-direction: column !important;
+        height: fit-content !important;
+        gap: 4em !important;
+        margin: 2em 0 !important;
+    }
+
+    .cardsContainer>.card {
+        width: 100% !important;
+    }
+
+    section {
+        padding: 2em 1em !important;
+        height: fit-content !important;
+        gap: 3em !important;
+    }
+
+    section>div {
+        height: fit-content !important;
+    }
+
+    .coffeeCardsContainer {
+        width: 100% !important;
+        height: fit-content !important;
+        flex-direction: column !important;
+    }
+
+    .coffeeCardsContainer .card {
+        width: 100% !important;
+        height: 500px !important;
+    }
+
+    .aboutUs>.aboutUsContent {
+        width: 100% !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .aboutUs>.aboutUsContent>div {
+        width: 100% !important;
+    }
+
+    .aboutUs>.aboutUsContent>.image {
+        padding: 1em !important;
+    }
+
+    .clientsMsg>.clientsMsgContent {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .contact>.contactContainer>form>label>input,
+    .contact>.contactContainer>form>label>textarea {
+        width: 100% !important;
+    }
+
+    footer>p {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5em .5em;
+    }
 }
