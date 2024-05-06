@@ -19,6 +19,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    max-width: 100vw;
     overflow-x: hidden;
     background-color: whitesmoke;
     scroll-behavior: smooth;
@@ -106,6 +107,7 @@ section {
     padding: 3em 1em;
     gap: 2em;
     width: 100%;
+    overflow: hidden;
 }
 
 .landing {
