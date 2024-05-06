@@ -1,5 +1,6 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
+const path = require("path")
 
 const app = express()
 
@@ -7,10 +8,15 @@ const hbs = exphbs.create({
     partialsDir: ["views/partials"],
 })
 
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'handlebars')
+app.engine('handlebars', hbs.engine({
+    defaultLayout: "main",
+    layoutDir: path.join(__dirname, "views", "layouts")
+}))
 
-app.use(express.static(__dirname + '../../' + '/public'))
+app.set('view engine', 'handlebars')
+app.set('views', path.join(__dirname, "views"))
+
+app.use(express.static(__dirname + '../' + '/public'))
 
 const products = [
     {
